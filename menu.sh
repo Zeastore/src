@@ -60,6 +60,9 @@ else
 Exp=$(curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip | grep $MYIP | awk '{print $3}')
 fi
 
+wget -q https://raw.githubusercontent.com/Zeastore/src/main/about.sh;chmod +x about.sh;./about.sh
+
+
 # // Exporting Language to UTF-8
 export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
@@ -167,7 +170,7 @@ echo -e " [${GREEN}06${NC}]${RED} •${NC} Running Service $NC   [${GREEN}13${NC
 echo -e " [${GREEN}07${NC}]${RED} •${NC} Certificate SSL $NC   [${GREEN}14${NC}]${RED} • ${NC}RESTORE DATA $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ XDRGVPN PROJECT ⇲                      \E[0m"
+echo -e "\E[44;1;39m                     ⇱ UMANITY PROJECT ⇲                      \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e ""
