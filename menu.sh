@@ -1,8 +1,6 @@
 #!/bin/bash
 # Menu For Script
 # Edition : Stable Edition V1.0
-# Auther  : AWALUDIN FERIYANTO
-# (C) Copyright 2021-2022 By RIDDEV
 # =========================================
 #!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
@@ -10,7 +8,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -28,7 +26,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -45,7 +43,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -59,7 +57,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/MyRidwan/izinvps/ipuk/ip | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip | grep $MYIP | awk '{print $3}')
 fi
 
 # // Exporting Language to UTF-8
@@ -148,8 +146,7 @@ echo -e "□ Server IP           = ${IP}"
 echo -e "□ Clients Name        = $Name"
 echo -e "□ Exfire Script VPS   = $Exp"
 echo -e "□ Time Reboot VPS     = 00:00 ( Jam 12 Malam )"
-echo -e "□ License Limit       = 3 VPS ( Persatu IP VPS )"
-echo -e "□ AutoScript By Dev   = XDRG ( Ridwan-Store )"
+echo -e "□ AutoScript Free By  = HAMBA ALLAH 😇🙏👼"
 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
@@ -161,8 +158,8 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                     ⇱ MENU LAYANAN ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e " [${GREEN}01${NC}]${RED} •${NC} SSH-WS Manager  $NC   [${GREEN}08${NC}]${RED} • ${NC}Info Dev Manager $NC"
-echo -e " [${GREEN}02${NC}]${RED} •${NC} Vmess Manager    $NC  [${GREEN}09${NC}]${RED} • ${NC}Speedtest Manager $NC"
+echo -e " [${GREEN}01${NC}]${RED} •${NC} SSH-WS Manager  $NC   [${GREEN}08${NC}]${RED} • ${NC}Info Pembuat $NC"
+echo -e " [${GREEN}02${NC}]${RED} •${NC} Vmess Manager    $NC  [${GREEN}09${NC}]${RED} • ${NC}Speedtest VPS $NC"
 echo -e " [${GREEN}03${NC}]${RED} •${NC} Trojan Manager   $NC  [${GREEN}10${NC}]${RED} • ${NC}Ssws Manager $NC"
 echo -e " [${GREEN}04${NC}]${RED} •${NC} Trial Manager   $NC   [${GREEN}11${NC}]${RED} • ${NC}Change Banner $NC"
 echo -e " [${GREEN}05${NC}]${RED} •${NC} Add Domain    $NC     [${GREEN}12${NC}]${RED} • ${NC}Cek Bandwith User Xray $NC"
