@@ -84,47 +84,46 @@ touch /etc/v2ray/domain
 touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
 
-
-echo -e "[ ${tyblue}NOTES${NC} ] Proses Sebelum Install.. "
-sleep 1
-echo -e "[ ${tyblue}NOTES${NC} ] Pengecekan Kesiapan Vps.."
-sleep 2
-echo -e "[ ${green}INFO${NC} ] Chek Vps Server"
-sleep 1
-totet=`uname -r`
-REQUIRED_PKG="linux-headers-$totet"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
-echo Checking for $REQUIRED_PKG: $PKG_OK
-if [ "" = "$PKG_OK" ]; then
-  sleep 2
-  echo -e "[ ${yell}WARNING${NC} ] Proses install ...."
-  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
-  apt-get --yes install $REQUIRED_PKG
-  sleep 1
-  echo ""
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] If error you need.. to do this"
-  sleep 1
-  echo ""
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 1. apt update -y"
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 2. apt upgrade -y"
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 3. apt dist-upgrade -y"
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 4. reboot"
-  sleep 1
-  echo ""
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] Proses rebooting"
-  sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] Apakah Anda Ingin Mulai Menginstal Script"
-  echo -e "[ ${tyblue}NOTES${NC} ] Kalo Iyah Silahkan Tekan Enter"
-  read
-else
-  echo -e "[ ${green}INFO${NC} ] Install Berhasil"
-fi
+#echo -e "[ ${tyblue}NOTES${NC} ] Proses Sebelum Install.. "
+#sleep 1
+#echo -e "[ ${tyblue}NOTES${NC} ] Pengecekan Kesiapan Vps.."
+#sleep 2
+#echo -e "[ ${green}INFO${NC} ] Chek Vps Server"
+#sleep 1
+#totet=`uname -r`
+#REQUIRED_PKG="linux-headers-$totet"
+#PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+#echo Checking for $REQUIRED_PKG: $PKG_OK
+#if [ "" = "$PKG_OK" ]; then
+#  sleep 2
+#  echo -e "[ ${yell}WARNING${NC} ] Proses install ...."
+#  echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+#  apt-get --yes install $REQUIRED_PKG
+#  sleep 1
+#  echo ""
+ # sleep 1
+ # echo -e "[ ${tyblue}NOTES${NC} ] If error you need.. to do this"
+ # sleep 1
+ # echo ""
+#  sleep 1
+#  echo -e "[ ${tyblue}NOTES${NC} ] 1. apt update -y"
+ # sleep 1
+#  echo -e "[ ${tyblue}NOTES${NC} ] 2. apt upgrade -y"
+#  sleep 1
+#  echo -e "[ ${tyblue}NOTES${NC} ] 3. apt dist-upgrade -y"
+ # sleep 1
+ # echo -e "[ ${tyblue}NOTES${NC} ] 4. reboot"
+#  sleep 1
+ # echo ""
+ # sleep 1
+ # echo -e "[ ${tyblue}NOTES${NC} ] Proses rebooting"
+#  sleep 1
+#  echo -e "[ ${tyblue}NOTES${NC} ] Apakah Anda Ingin Mulai Menginstal Script"
+ # echo -e "[ ${tyblue}NOTES${NC} ] Kalo Iyah Silahkan Tekan Enter"
+ # read
+#else
+#  echo -e "[ ${green}INFO${NC} ] Install Berhasil"
+#fi
 
 ttet=`uname -r`
 ReqPKG="linux-headers-$ttet"
@@ -161,67 +160,72 @@ chmod 644 /root/.profile
 
 echo -e "[ ${green}INFO${NC} ] Proses install file"
 apt install git curl -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Bagus ... installation file sudah ready"
+echo -e "[ ${green}INFO${NC} ] Installation file sudah ready"
 sleep 2
-echo -ne "[ ${green}INFO${NC} ] Check perizinan : "
+echo -ne "[ ${green}INFO${NC} ] Memasang Domain.....  "
 
-PERMISSION
-if [ -f /home/needupdate ]; then
-red "Proses Script Update!!!"
-exit 0
-elif [ "$res" = "Perizinan Diberikan..." ]; then
-green "Perizinan Diberikan..."
-else
-red "Perizinan Ditolak..."
-rm setup.sh > /dev/null 2>&1
-sleep 10
-exit 0
-fi
-sleep 3
+mkdir /var/lib/scrz-prem;
+echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
+wget https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
+
+
+#PERMISSION
+#if [ -f /home/needupdate ]; then
+#red "Proses Script Update!!!"
+#exit 0
+#elif [ "$res" = "Perizinan Diberikan..." ]; then
+#green "Perizinan Diberikan..."
+#else
+#red "Perizinan Ditolak..."
+#rm setup.sh > /dev/null 2>&1
+#sleep 10
+#exit 0
+#fi
+#sleep 3
 
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 
-if [ -f "/etc/xray/domain" ]; then
-echo ""
-echo -e "[ ${green}INFO${NC} ] Script Siap Diinstall"
-echo -ne "[ ${yell}WARNING${NC} ] Apakah Anda Ingin Mulai Menginstall? (y/n)? "
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
+#if [ -f "/etc/xray/domain" ]; then
+#echo ""
+#echo -e "[ ${green}INFO${NC} ] Script Siap Diinstall"
+#echo -ne "[ ${yell}WARNING${NC} ] Apakah Anda Ingin Mulai Menginstall? (y/n)? "
+#read answer
+#if [ "$answer" == "${answer#[Yy]}" ] ;then
 rm setup.sh
-sleep 10
-exit 0
-else
-clear
-fi
-fi
+#sleep 10
+#exit 0
+#else
+#clear
+#fi
+#fi
 
 echo ""
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      SCRIPT RIDWAN               $NC"
+echo -e "$green      SCRIPT HAMBA ALLAH               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget -q https://raw.githubusercontent.com/myridwan/src/ipuk/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/Zeastore/src/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-#wget -q "https://raw.githubusercontent.com/myridwan/src/ipuk/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
-clear
-yellow "Add Domain for vmess/vless/trojan dll"
-echo " "
-read -rp "Input ur domain : " -e pp
-    if [ -z $pp ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
-        echo "$pp" > /root/scdomain
-	echo "$pp" > /etc/xray/scdomain
-	echo "$pp" > /etc/xray/domain
-	echo "$pp" > /etc/v2ray/domain
-	echo $pp > /root/domain
-        echo "IP=$pp" > /var/lib/scrz-prem/ipvps.conf
-    fi
+#wget -q "https://raw.githubusercontent.com/Zeastore/src/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
+#clear
+#yellow "Add Domain for vmess/vless/trojan dll"
+#echo " "
+#read -rp "Input ur domain : " -e pp
+#    if [ -z $pp ]; then
+#        echo -e "
+ #       Nothing input for domain!
+ #       Then a random domain will be created"
+#    else
+ #       echo "$pp" > /root/scdomain
+#	echo "$pp" > /etc/xray/scdomain
+#	echo "$pp" > /etc/xray/domain
+#	echo "$pp" > /etc/v2ray/domain
+#	echo $pp > /root/domain
+#        echo "IP=$pp" > /var/lib/scrz-prem/ipvps.conf
+$    fi
     
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -229,23 +233,23 @@ echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/myridwan/src/ipuk/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Zeastore/src/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/myridwan/src/ipuk/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/myridwan/src/ipuk/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-wget https://raw.githubusercontent.com/myridwan/src/ipuk/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install BOT XOLPANEL              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 2
-clear
+wget https://raw.githubusercontent.com/Zeastore/src/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Zeastore/src/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Zeastore/src/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+#echo -e "$green          Install BOT XOLPANEL              $NC"
+#echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+#sleep 2
+#clear
 #install ohp
-wget https://raw.githubusercontent.com/myridwan/src/ipuk/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
+#wget https://raw.githubusercontent.com/Zeastore/src/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -272,7 +276,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/myridwan/src/ipuk/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/Zeastore/src/main/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -284,7 +288,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ SCRIPT RIDWAN ]-===================="
+echo "=====================-[ SCRIPT HAMBA ALLAH ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -326,7 +330,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By RIDWAN ]-==============="
+echo "===============-[ Script Created By HAMBA ALLAH ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
