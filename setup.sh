@@ -164,9 +164,9 @@ echo -e "[ ${green}INFO${NC} ] Installation file sudah ready"
 sleep 2
 echo -ne "[ ${green}INFO${NC} ] Memasang Domain.....  "
 
-mkdir /var/lib/scrz-prem;
-echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
-wget https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
+#mkdir /var/lib/scrz-prem;
+#echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
+#wget https://raw.githubusercontent.com/Zeastore/src/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 
 
 #PERMISSION
@@ -185,6 +185,8 @@ wget https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh && chmod +x 
 
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
+wget https://raw.githubusercontent.com/Zeastore/src/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
+
 
 #if [ -f "/etc/xray/domain" ]; then
 #echo ""
@@ -225,7 +227,7 @@ clear
 #	echo "$pp" > /etc/v2ray/domain
 #	echo $pp > /root/domain
 #        echo "IP=$pp" > /var/lib/scrz-prem/ipvps.conf
-$    fi
+#    fi
     
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
