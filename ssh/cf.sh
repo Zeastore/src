@@ -17,9 +17,9 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 #MYIP=$(wget -qO- https://ipv6.icanhazip.com);
 clear
 apt install jq curl -y
-DOMAIN=zeaking-sc.me
+DOMAIN=dxtxtr.me
 sub=$(</dev/urandom tr -dc a-z | head -c4)
-SUB_DOMAIN=${sub}.zeaking-sc.me
+SUB_DOMAIN=${sub}.dxtxtr.me
 CF_ID=mulahkual@gmail.com
 CF_KEY=565df838cbdf80722e12eb5b1d7186143b74e
 set -euo pipefail
