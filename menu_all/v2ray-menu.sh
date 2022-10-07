@@ -53,14 +53,6 @@ echo -e "
 [\033[0;32m02\033[0m] • Deleting $rekk Vmess Websocket Account
 [\033[0;32m03\033[0m] • Extending $rekk Vmess Account Active Life
 [\033[0;32m04\033[0m] • Check User Login $rekk
-
-\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
-
-[\033[0;32m05\033[0m] • Create $rekk Vless Websocket Account
-[\033[0;32m06\033[0m] • Deleting $rekk Vless Websocket Account
-[\033[0;32m07\033[0m] • Extending $rekk Vless Account Active Life
-[\033[0;32m08\033[0m] • Check User Login $rekk
-
 \033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
@@ -88,46 +80,6 @@ case "$x" in
    4 | 04)
    clear
    cek-ws
-   break
-   ;;
-   5 | 05)
-   clear
-   add-vless
-   break
-   ;;
-   6 | 06)
-   clear
-   del-vless
-   break
-   ;;
-   7 | 07)
-   clear
-   renew-vless
-   break
-   ;;
-   8 | 08)
-   clear
-   cek-user
-   break
-   ;;
-   9 | 09)
-   clear
-   addxtls
-   break
-   ;;
-   10)
-   clear
-   delxtls
-   break
-   ;;
-   11)
-   clear
-   renewxtls
-   break
-   ;;
-   12)
-   clear
-   cekxtls
    break
    ;;
    0 | 00)
