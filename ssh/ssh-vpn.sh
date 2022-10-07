@@ -292,7 +292,8 @@ wget -O menu "https://raw.githubusercontent.com/Zeastore/src/main/menu.sh"
 wget -O sshws "https://raw.githubusercontent.com/Zeastore/src/main/ssh/sshws.sh"
 wget -O trial "https://raw.githubusercontent.com/Zeastore/src/main/ssh/trial.sh"
 wget -O ssh-menu "https://raw.githubusercontent.com/Zeastore/src/main/menu_all/ssh-menu.sh"
-wget -O v2ray-menu "https://raw.githubusercontent.com/Zeastore/src/main/menu_all/v2ray-menu.sh"
+wget -O vmess-menu "https://raw.githubusercontent.com/Zeastore/src/main/menu_all/vmess-menu.sh"
+wget -O vless-menu "https://raw.githubusercontent.com/Zeastore/src/main/menu_all/vless-menu.sh"
 wget -O trojan-menu "https://raw.githubusercontent.com/Zeastore/src/main/menu_all/trojan-menu.sh"
 wget -O ssgrpc-menu "https://raw.githubusercontent.com/Zeastore/src/main/menu_all/ssgrpc-menu.sh"
 wget -O cek-ws "https://raw.githubusercontent.com/Zeastore/src/main/xray/cek-ws.sh"
@@ -316,7 +317,8 @@ chmod +x asu
 chmod +x sshws
 chmod +x trial
 chmod +x ssh-menu
-chmod +x v2ray-menu
+chmod +x vmess-menu
+chmod +x vless-menu
 chmod +x trojan-menu
 chmod +x ssgrpc-menu
 chmod +x cek-ws
