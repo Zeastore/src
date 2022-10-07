@@ -88,5 +88,4 @@ case "$x" in
    *)
    clear
 esac
-done
 #fim
