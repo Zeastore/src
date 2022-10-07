@@ -60,8 +60,6 @@ else
 Exp=$(curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip | grep $MYIP | awk '{print $3}')
 fi
 
-wget -q https://raw.githubusercontent.com/Zeastore/src/main/about.sh;chmod +x about.sh;./about.sh
-
 
 # // Exporting Language to UTF-8
 export LC_ALL='en_US.UTF-8'
