@@ -37,10 +37,10 @@ echo -e "\E[0;41;36m                  TROJAN MENU                    \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 chck_pid
 echo -e "
-[\033[0;32m01\033[0m] • Create Trojan GRPC/WS Account
-[\033[0;32m02\033[0m] • Deleting Trojan GRPC/WS Account
-[\033[0;32m03\033[0m] • Extending Trojan GRPC/WS Account Active Life
-[\033[0;32m04\033[0m] • Check User Login Trojan GRPC/WS
+[\033[0;32m01\033[0m] • Create Trojan GO & GRCP Account
+[\033[0;32m02\033[0m] • Deleting Trojan GO & GRCP Account
+[\033[0;32m03\033[0m] • Extending Trojan GO & GRCP Account Active Life
+[\033[0;32m04\033[0m] • Check User Login Trojan GO & GRCP
 
 [00] • Back to Main Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
