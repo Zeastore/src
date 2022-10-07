@@ -123,26 +123,6 @@ case "$x" in
    cek-user
    break
    ;;
- 9 | 09)
-   clear
-   addxtls
-   break
-   ;;
- 10)
-   clear
-   delxtls
-   break
-   ;;
- 11)
-   clear
-   renewxtls
-   break
-   ;;
- 12)
-   clear
-   cekxtls
-   break
-   ;;
  0 | 00)
    clear
    menu
