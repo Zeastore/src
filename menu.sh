@@ -159,13 +159,13 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e "\E[44;1;39m                     ⇱ MENU LAYANAN ⇲                         \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e " [${GREEN}01${NC}]${RED} •${NC} SSH-WS Manager  $NC   [${GREEN}08${NC}]${RED} • ${NC}Info Pembuat $NC"
-echo -e " [${GREEN}02${NC}]${RED} •${NC} Vmess Manager    $NC  [${GREEN}09${NC}]${RED} • ${NC}Speedtest VPS $NC"
-echo -e " [${GREEN}03${NC}]${RED} •${NC} Trojan Manager   $NC  [${GREEN}10${NC}]${RED} • ${NC}Ssws Manager $NC"
-echo -e " [${GREEN}04${NC}]${RED} •${NC} Trial Manager   $NC   [${GREEN}11${NC}]${RED} • ${NC}Change Banner $NC"
-echo -e " [${GREEN}05${NC}]${RED} •${NC} Add Domain    $NC     [${GREEN}12${NC}]${RED} • ${NC}Cek Bandwith User Xray $NC"
-echo -e " [${GREEN}06${NC}]${RED} •${NC} Running Service $NC   [${GREEN}13${NC}]${RED} • ${NC}Change Password VPS $NC"
-echo -e " [${GREEN}07${NC}]${RED} •${NC} Certificate SSL $NC   [${GREEN}14${NC}]${RED} • ${NC}RESTORE DATA $NC"
+echo -e " [${GREEN}01${NC}]${RED} •${NC} SSH-WS Manager  $NC   [${GREEN}08${NC}]${RED} • ${NC}Renew Certv2ray $NC"
+echo -e " [${GREEN}02${NC}]${RED} •${NC} Vmess Manager    $NC  [${GREEN}09${NC}]${RED} • ${NC}Cek Running Service $NC"
+echo -e " [${GREEN}03${NC}]${RED} •${NC} Vless Manager    $NC  [${GREEN}10${NC}]${RED} • ${NC}Info Pembuat Script $NC"
+echo -e " [${GREEN}04${NC}]${RED} •${NC} Trojan Manager  $NC   [${GREEN}11${NC}]${RED} • ${NC}Speedtest VPS $NC"
+echo -e " [${GREEN}05${NC}]${RED} •${NC} Sodowsock     $NC     [${GREEN}12${NC}]${RED} • ${NC}Ganti Banner Login $NC"
+echo -e " [${GREEN}06${NC}]${RED} •${NC} Trial Manager   $NC   [${GREEN}13${NC}]${RED} • ${NC}Cek Bandwidth use $NC"
+echo -e " [${GREEN}07${NC}]${RED} •${NC} Ganti Domain    $NC   [${GREEN}14${NC}]${RED} • ${NC}Reboot VPS $NC"
 echo -e " ${RED}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ UMANITY PROJECT ⇲                      \E[0m"
@@ -181,51 +181,51 @@ ssh-menu
 ;;
 2)
 clear
-v2ray-menu
+vmess-menu
 ;;
 3)
 clear
-trojan-menu
+vless-menu
 ;;
 4)
 clear
-trial-menu
+trojan-menu
 ;;
 5)
 clear
-add-host
+add-ssws
 ;;
 6)
 clear
-running
+trial-menu
 ;;
 7)
 clear
-crtv2ray
+add-host
 ;;
 8)
 clear
-about
+certv2ray
 ;;
 9)
 clear
-speedtest
+running
 ;;
 10)
 clear
-add-ssws
+about
 ;;
 11)
 clear
-banner
+speedtest
 ;;
 12)
 clear
-info-menu
+banner
 ;;
 13)
 clear
-passwd
+info-menu
 ;;
 14)
 reboot
