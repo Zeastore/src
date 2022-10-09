@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/sampiiiiu
+# My Telegram 
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -35,17 +35,17 @@ echo -e "\E[41;1;39m                     ⇱ XRAY MENU ⇲              \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 rekk='Xray'
 echo -e "
-[${GREEN}05${NC}] ${color1}•${NC} Create $rekk Vless Websocket Account
-[${GREEN}06${NC}] ${color1}•${NC} Deleting $rekk Vless Websocket Account
-[${GREEN}07${NC}] ${color1}•${NC} Extending $rekk Vless Account Active Life
-[${GREEN}08${NC}] ${color1}•${NC} Check User Login $rekk
+[${GREEN}01${NC}] ${color1}•${NC} Create $rekk Vless Websocket Account
+[${GREEN}02${NC}] ${color1}•${NC} Deleting $rekk Vless Websocket Account
+[${GREEN}03${NC}] ${color1}•${NC} Extending $rekk Vless Account Active Life
+[${GREEN}04${NC}] ${color1}•${NC} Check User Login $rekk
 
 ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}
 
 [${GREEN}00${NC}] ${color1}• ${NC}Kembali Ke Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[41;1;39m                  ⇱ GEOVPN PROJECT ⇲            \E[0m"
+echo -e "\E[41;1;39m                  ⇱ HUMANITY PROJECT ⇲            \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e""
 read -p " Select menu :  "  v2ray
