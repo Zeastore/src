@@ -52,16 +52,16 @@ read -p " Select menu :  "  v2ray
 echo -e ""
 case $v2ray in
 1 |01)
-addvless
+add-vless
 ;;
 2 |02)
-delvless
+del-vless
 ;;
 3 |03)
-renewvless
+renew-vless
 ;;
 4 |04)
-cekvless
+cek-vless
 ;;
 0 | 00)
 menu
