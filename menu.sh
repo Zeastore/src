@@ -205,7 +205,7 @@ add-host
 ;;
 8)
 clear
-certv2ray
+crtv2ray
 ;;
 9)
 clear
