@@ -31,7 +31,7 @@ NC='\e[0m'
 clear
 x="ok"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[41;1;39m                     ⇱ XRAY MENU ⇲              \E[0m"
+echo -e "\E[41;1;39m                   ⇱ XRAY MENU ⇲              \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 rekk='Xray'
 echo -e "
@@ -45,7 +45,7 @@ ${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━�
 [${GREEN}00${NC}] ${color1}• ${NC}Kembali Ke Menu \033[1;32m<\033[1;33m<\033[1;31m<\033[1;31m"
 echo ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[41;1;39m                  ⇱ HUMANITY PROJECT ⇲            \E[0m"
+echo -e "\E[41;1;39m                ⇱ HUMANITY PROJECT ⇲            \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e""
 read -p " Select menu :  "  v2ray
