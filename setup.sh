@@ -242,7 +242,7 @@ echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Zeastore/src/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Zeastore/src/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/Zeastore/src/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 wget https://raw.githubusercontent.com/Zeastore/src/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
