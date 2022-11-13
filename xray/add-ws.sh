@@ -230,8 +230,6 @@ echo -e "link none TLS  : ${vmesslink2}" | tee -a /etc/log-create-user.log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
 echo -e "link  GRPC  : ${vmesslink3}" | tee -a /etc/log-create-user.log
 echo -e "----------------------------------" | tee -a /etc/log-create-user.log
-echo -e "OpenClash : http://${domain}:85/vmess-$user.txt" | tee -a /etc/log-create-user.log
-echo -e "----------------------------------" | tee -a /etc/log-create-user.log
 echo -e "Aktif Selama   : $masaaktif Hari" | tee -a /etc/log-create-user.log
 echo -e "Dibuat Pada    : $tnggl" | tee -a /etc/log-create-user.log
 echo -e "Berakhir Pada  : $expe" | tee -a /etc/log-create-user.log
