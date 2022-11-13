@@ -39,12 +39,17 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
+    IZIN=$( curl https://raw.githubusercontent.com/Zeastore/src/main/ip | grep $MYIP )
+    if [ $MYIP = $IZIN ]; then
+    echo -e "${green}Permission Accepted...${NC}"
     else
-    res="Perizinan Diberikan..."
-    fi
+    echo -e "${red}Permission Denied!${NC}";
+    echo "Please Contact Admin"
+    echo "Telegram : not found"
+    echo "Whatsapp : not found"
+    rm -f setup.sh
+   exit 0
+fi
     BURIQ
 }
 
