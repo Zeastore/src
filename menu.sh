@@ -12,10 +12,15 @@ BURIQ () {
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
+    exp=$( curl -s https://raw.githubusercontent.com/Zeastore/src/main/ip | grep -w $IP | cut -d ' ' -f 3 )
+now=`date -d "0 days" +"%Y-%m-%d"`
+expired_date=$(date -d "$exp" +%s)
+now_date=$(date -d "$now" +%s)
+sisa_hari=$(( ($expired_date - $now_date) / 86400 ))
+if [[ $sisa_hari -lt 0 ]]; then
+    echo $sisa_hari > /etc/${Auther}/license-remaining-active-days.db
+    echo -e "${EROR} Your License Key Expired ( $sisa_hari Days )"
+    exit 1
     if [[ "$exp2" -le "0" ]]; then
     echo $user > /etc/.$user.ini
     else
@@ -146,6 +151,7 @@ echo -e "□ Current Domain      = $( cat /etc/xray/domain )"
 echo -e "□ Server IP           = ${IP}"
 echo -e "□ Clients Name        = $Name"
 echo -e "□ Exfire Script VPS   = $Exp"
+echo -r "□ Expired Script In   = $sisa_hari"
 echo -e "□ Time Reboot VPS     = 00:00 ( Jam 12 Malam )"
 echo -e "□ AutoScript Free By  = HAMBA ALLAH 😇🙏👼"
 
