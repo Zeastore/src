@@ -26,7 +26,7 @@ if [[ $sisa_hari -lt 0 ]]; then
     else
     rm -f /etc/.$user.ini > /dev/null 2>&1
     fi
-    done
+ #   done
     rm -f /root/tmp
 }
 
