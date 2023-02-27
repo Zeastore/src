@@ -28,7 +28,7 @@ if [[ $sisa_hari -lt 0 ]]; then
     fi
  #   done
     rm -f /root/tmp
-}
+# }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/Zeastore/src/main/ip | grep $MYIP | awk '{print $2}')
