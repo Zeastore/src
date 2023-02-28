@@ -17,15 +17,6 @@ now=`date -d "0 days" +"%Y-%m-%d"`
 expired_date=$(date -d "$exp" +%s)
 now_date=$(date -d "$now" +%s)
 sisa_hari=$(( ($expired_date - $now_date) / 86400 ))
-if [[ $sisa_hari -lt 0 ]]; then
-    echo $sisa_hari > /etc/${Auther}/license-remaining-active-days.db
-    echo -e "${EROR} Your License Key Expired ( $sisa_hari Days )"
-    exit 1
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
-    fi
  #   done
     rm -f /root/tmp
 # }
